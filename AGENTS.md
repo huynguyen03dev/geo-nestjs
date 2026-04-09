@@ -45,3 +45,4 @@ Also keep longer milestone logs in `docs/placesapi-progress-notes.md`.
 
 - 2026-04-09: Project learning direction established. Milestone roadmap and progress-log docs created. Next step: execute Milestone 1 setup (Nest + PostGIS + migrations).
 - 2026-04-09: Learning-mode policy updated. Agents must coach-first and avoid doing implementation autonomously; user should perform steps to maximize learning.
+- 2026-04-09: Milestone 1 foundation completed in practice: Docker PostGIS (18+ on host port 5433), NestJS DB connection via ConfigModule + TypeORM, and first migration enabling PostGIS created and applied. Key learned: separate app runtime config (`ConfigService`) from CLI runtime config (`data-source.ts` + `dotenv`). Next step: start Milestone 2 by designing `Place` entity + DTO validation.
