@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgis/postgis:18-3.6
+    container_name: placesapi-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: placesapi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      # PostgreSQL 18+ stores data under /var/lib/postgresql
+      - postgis_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d placesapi"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postgis_data:
