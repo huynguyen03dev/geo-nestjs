@@ -28,3 +28,10 @@ For each meaningful step, add:
 - **Learned:** Migrations should mirror entity intent (types/nullability/defaults), and GeoJSON point order is longitude-first (`[lng, lat]`).
 - **Blockers:** None active.
 - **Next step:** Integrate `TypeOrmModule.forFeature([Place])`, inject repository, and implement real CRUD persistence.
+
+### 2026-04-09
+- **Milestone:** Milestone 2 (setup hygiene)
+- **Built/Changed:** Added `.env.example` for reproducible local configuration (`DB_*`, `PORT`) without committing private `.env` values.
+- **Learned:** Config templates make onboarding and troubleshooting easier while keeping secret handling safer.
+- **Blockers:** No git remote configured yet for push.
+- **Next step:** Add remote and push, then continue repository-backed CRUD implementation.

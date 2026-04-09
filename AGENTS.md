@@ -1,4 +1,4 @@
-# AGENTS.md — geo-express learning contract
+# AGENTS.md — geo-nestjs learning contract
 
 ## Project context
 - This repository is a hands-on learning project: **NestJS + PostGIS** by building a **Places API**.
@@ -47,3 +47,4 @@ Also keep longer milestone logs in `docs/placesapi-progress-notes.md`.
 - 2026-04-09: Learning-mode policy updated. Agents must coach-first and avoid doing implementation autonomously; user should perform steps to maximize learning.
 - 2026-04-09: Milestone 1 foundation completed in practice: Docker PostGIS (18+ on host port 5433), NestJS DB connection via ConfigModule + TypeORM, and first migration enabling PostGIS created and applied. Key learned: separate app runtime config (`ConfigService`) from CLI runtime config (`data-source.ts` + `dotenv`). Next step: start Milestone 2 by designing `Place` entity + DTO validation.
 - 2026-04-09: Milestone 2 scaffold started: Places module/controller/service/entity + DTOs added, global validation pipe enabled, and `CreatePlacesTable` migration applied (uuid + geography point + timestamps). Key learned: align entity fields and SQL migration schema, and use GeoJSON `Point` with coordinates order `[lng, lat]`. Next step: wire TypeORM repository in PlacesService and replace placeholder CRUD returns with real DB operations.
+- 2026-04-09: Added `.env.example` with local defaults (`DB_*`, `PORT`) to make setup reproducible and safer than sharing real `.env`. Key learned: config templates reduce onboarding friction and accidental secret commits. Next step: implement repository-backed CRUD in PlacesService.
