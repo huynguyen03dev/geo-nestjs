@@ -42,3 +42,10 @@ For each meaningful step, add:
 - **Learned:** A focused README is part of architecture quality because it reduces onboarding errors and supports repeatable local setup.
 - **Blockers:** None.
 - **Next step:** Replace placeholder Places service responses with repository-backed CRUD logic.
+
+### 2026-04-10
+- **Milestone:** Milestone 2 (CRUD completion)
+- **Built/Changed:** Integrated `TypeOrmModule.forFeature([Place])`, injected repository into PlacesService, and implemented real create/find/update/delete persistence. Added 204 delete behavior and fixed entity metadata/table-column mismatches (`autoLoadEntities`, `@Entity('places')`, timestamp column name mapping).
+- **Learned:** Runtime metadata wiring and migration/entity naming consistency are mandatory for TypeORM to work reliably.
+- **Blockers:** None.
+- **Next step:** Begin Milestone 3 by adding nearby radius endpoint with `ST_DWithin`.

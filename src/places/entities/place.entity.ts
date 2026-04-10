@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import type { Point } from "geojson";
 
-@Entity()
+@Entity('places')
 export class Place {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -22,9 +22,9 @@ export class Place {
   })
   location: Point;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ name: 'created_at', type: 'timestamptz' })
   createdAt: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ name: 'updated_at', type: 'timestamptz' })
   updatedAt: Date;
 }
