@@ -35,3 +35,10 @@ For each meaningful step, add:
 - **Learned:** Config templates make onboarding and troubleshooting easier while keeping secret handling safer.
 - **Blockers:** No git remote configured yet for push.
 - **Next step:** Add remote and push, then continue repository-backed CRUD implementation.
+
+### 2026-04-10
+- **Milestone:** Milestone 2 (documentation quality)
+- **Built/Changed:** Replaced default Nest starter README with project-specific docs (learning goal, milestone status, setup flow, env template, migration commands, current endpoints, troubleshooting).
+- **Learned:** A focused README is part of architecture quality because it reduces onboarding errors and supports repeatable local setup.
+- **Blockers:** None.
+- **Next step:** Replace placeholder Places service responses with repository-backed CRUD logic.
